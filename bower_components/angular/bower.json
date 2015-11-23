@@ -1,8 +1,22 @@
-{
-  "name": "angular",
-  "version": "1.4.8",
-  "main": "./angular.js",
-  "ignore": [],
+"name": "Cry Movie Database",
+  "homepage": "",
+  "authors": [
+    "Jared Bilton <jsbilton@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
   "dependencies": {
+    "angular-route": "~1.4.8",
+    "angular": "~1.4.8",
+
   }
 }
