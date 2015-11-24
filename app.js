@@ -4,7 +4,7 @@
   'use strict';
 
   angular
-  .modules('flix', [
+  .module('flix', [
     'ngRoute' //ng route that is an array
   ])
   //routeProvider works with ng-view, injected it and chaining when statements
