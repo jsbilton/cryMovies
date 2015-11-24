@@ -1,8 +1,8 @@
 <h1>List Page</h1>
 
-<div ng-repeat="">
+<div ng-repeat="rudy in cryFilms">
   <h3>{{rudy.title}}</h3>
-  <img src="{{rudy.cover}}" alt="" />
+  <img ng-src="{{rudy.cover}}" alt="">
     <p>
       {{rudy.summary}}
     </p>
