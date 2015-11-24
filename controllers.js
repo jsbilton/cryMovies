@@ -11,7 +11,7 @@
       };
       $scope.text = "Aloha amigo";
     })
-    .controller('FlixController, function($scope, FlixHub){
+    .controller('FlixController', function($scope, FlixHub){
       FlixHub.getFlix().success(function (flix){
         console.log(flix);
         $scope.cryFilms = flix; //can use in html
@@ -20,5 +20,5 @@
         console.log(newFlix);
         FlixHub.createFlix(newFlix);
       }
-    }')
+    })
 }());
