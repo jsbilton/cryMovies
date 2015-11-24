@@ -5,51 +5,35 @@
 
   angular
   .modules('flix', [
-    'ngRoute'
+    'ngRoute' //ng route that is an array
   ])
-  .config(function ($){
-
-  })
+  //routeProvider works with ng-view, injected it and chaining when statements
+  .config(function ($routeProvider){
+    $routeProvider
+      .when('/', {
+        template: '<h1>TESTIN</h1><a href="#/flix">GO to FLIX</a><button ng-click="alertMe()">ALERT ME</button>{{writing a message}}',
+        controller: 'MainController'
+      })
+      .when('/flix',{ //templateUrl in order to ref file
+        templateUrl: 'views/flix/list.html',
+        controller: 'FlixController'
+      })
+      .when('/flix:flixId',{
+        templateUrl: 'views/flix/show.html',
+        controller: 'FlixController'
+      })
+      .when('/flix:flixId/edit',{
+        templateUrl: 'views/flix/edit.html',
+        controller: 'FlixController'
+      })
+      .when('/addFlix',{
+        templateUrl: 'views/flix/create.html',
+        controller: 'FlixController'
+      })
+      .when('/404',{
+        templateUrl: 'views/404.html',
+      })
+      .otherwise({ redirectTo: '/404'})
+  });
 
 }());
-// (function () {
-//   "use strict";
-//
-//   angular
-//     .module('books', [
-//       'ngRoute'
-//     ])
-//     .config(function ($routeProvider) {
-//       $routeProvider
-//         .when('/', {
-//           template: '<h1>hello angular</h1><a href="#/books">go to books</a><button ng-click="alertMe()">alert me</button>{{msg}}',
-//           controller: 'MainController'
-//         })
-//         .when('/books', {
-//           templateUrl: 'views/books/list.html',
-//           controller: 'BooksController'
-//
-//         })
-//         .when('/books/:bookId', {
-//           templateUrl: 'views/books/show.html',
-//           controller: 'BooksController'
-//         })
-//         .when('/books/:bookId/edit', {
-//           templateUrl: 'views/books/edit.html',
-//           controller: 'BooksController'
-//         })
-//         .when('/addBook', {
-//           templateUrl: 'views/books/create.html',
-//           controller: 'BooksController'
-//         })
-//         .when('/404', {
-//           templateUrl: 'views/404.html'
-//         })
-//         .otherwise({ redirectTo: '/404'})
-//
-//     });
-//
-//
-//
-//
-// })();
