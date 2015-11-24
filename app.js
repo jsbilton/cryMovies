@@ -11,7 +11,7 @@
   .config(function ($routeProvider){
     $routeProvider
       .when('/', {
-        template: '<h1>TESTIN</h1><a href="#/flix">GO to FLIX</a><button ng-click="alertMe()">ALERT ME</button>{{writing a message}}',
+        template: '<h1>TESTING</h1><a href="#/flix">GO to FLIX</a><button ng-click="prompt()">prompt </button>{{text}}',
         controller: 'MainController'
       })
       .when('/flix',{ //templateUrl in order to ref file
